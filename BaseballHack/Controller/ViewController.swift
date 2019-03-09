@@ -27,11 +27,11 @@ class ViewController: UIViewController {
         tableView.register(TeamCell.self, forCellReuseIdentifier: "TeamCell")
         
         teams = [
-            (name: "New York Yankees", logo: nil, eval: 400),
-            (name: "Los Angeles Dodgers", logo: nil, eval: 300),
-            (name: "Chicago Cubs", logo: nil, eval: 290),
-            (name: "San Francisco Giants", logo: nil, eval: 285),
-            (name: "Boston Red Sox", logo: nil, eval: 280),
+            (name: "New York Yankees", logo: #imageLiteral(resourceName: "yankeesLogo"), eval: 400),
+            (name: "Los Angeles Dodgers", logo: #imageLiteral(resourceName: "dodgersLogo"), eval: 300),
+            (name: "Chicago Cubs", logo: #imageLiteral(resourceName: "cubsLogo"), eval: 290),
+            (name: "San Francisco Giants", logo: #imageLiteral(resourceName: "giantsLogo"), eval: 285),
+            (name: "Boston Red Sox", logo: #imageLiteral(resourceName: "soxLogo"), eval: 280),
         ]
         
         setupViews()

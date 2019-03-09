@@ -14,7 +14,7 @@ class GraphVC: UIViewController {
     let chartView: LineChartView = {
         let v = LineChartView(frame: .zero)
         v.translatesAutoresizingMaskIntoConstraints = false
-        v.backgroundColor = .blue
+        v.backgroundColor = .white
         v.layer.cornerRadius = 10
         return v
     }()
@@ -72,22 +72,33 @@ class GraphVC: UIViewController {
             return ChartDataEntry(x: Double(i), y: val)
         }
         
-        let set1 = LineChartDataSet(values: yVals1, label: "Share Price")
-        set1.axisDependency = .left
-        set1.setColor(UIColor(red: 255/255, green: 241/255, blue: 46/255, alpha: 1))
-        set1.drawCirclesEnabled = false
-        set1.lineWidth = 2
-        set1.circleRadius = 3
-        set1.fillAlpha = 1
-        set1.drawFilledEnabled = true
-        set1.fillColor = .blue
-        set1.highlightColor = UIColor(red: 244/255, green: 117/255, blue: 117/255, alpha: 1)
-        set1.drawCircleHoleEnabled = false
-        set1.fillFormatter = DefaultFillFormatter { _,_  -> CGFloat in
-            return CGFloat(self.chartView.leftAxis.axisMinimum)
-        }
+        //style chart
+        chartView.legend.enabled = false
+        chartView.drawGridBackgroundEnabled = true
+        chartView.xAxis.labelPosition = .bottom
+        //lineChartView.xAxis.drawGridLinesEnabled = false
+        chartView.leftAxis.drawGridLinesEnabled = false
+        chartView.rightAxis.drawGridLinesEnabled = false
+        chartView.leftAxis.drawLimitLinesBehindDataEnabled = true
+        chartView.pinchZoomEnabled = false
+        chartView.dragEnabled  = true
+        chartView.scaleXEnabled = false
+        chartView.scaleYEnabled = false
         
-        let data = LineChartData(dataSets: [set1])
+        let dataSet = LineChartDataSet(values: yVals1, label: "Share Price")
+        dataSet.setColor(.black)
+        dataSet.lineWidth = 1.0
+        dataSet.circleRadius = 5.0
+        dataSet.fillAlpha = 0.8
+        dataSet.fillColor = .blue
+        dataSet.highlightEnabled = false
+        dataSet.highlightColor = .blue
+        dataSet.drawCircleHoleEnabled = true
+        dataSet.circleHoleRadius = 3.0
+        dataSet.circleColors = [NSUIColor(cgColor: UIColor.green.cgColor)]
+        dataSet.drawFilledEnabled = true
+        
+        let data = LineChartData(dataSets: [dataSet])
         data.setDrawValues(false)
         
         chartView.data = data

@@ -14,7 +14,7 @@ class TeamCell: UITableViewCell {
         let iv = UIImageView()
         iv.translatesAutoresizingMaskIntoConstraints = false
         iv.contentMode = .scaleAspectFit
-        iv.backgroundColor = .blue
+        iv.backgroundColor = .clear
         return iv
     }()
     

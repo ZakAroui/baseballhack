@@ -194,7 +194,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BaseballHack/Pods-BaseballHack-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-BaseballHack/Pods-BaseballHack-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -205,7 +205,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BaseballHack/Pods-BaseballHack-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaseballHack/Pods-BaseballHack-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FA403ED63FEC9361EA3BCD4C /* [CP] Check Pods Manifest.lock */ = {

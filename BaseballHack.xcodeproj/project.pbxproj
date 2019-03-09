@@ -13,6 +13,7 @@
 		738776412234230200FE9944 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 738776402234230200FE9944 /* Assets.xcassets */; };
 		738776442234230200FE9944 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 738776422234230200FE9944 /* LaunchScreen.storyboard */; };
 		7387764D223445CA00FE9944 /* GraphVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7387764C223445CA00FE9944 /* GraphVC.swift */; };
+		73C2420A2234511F00304821 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C242092234511F00304821 /* TeamCell.swift */; };
 		D77F2D451CA0E2C4C1C8EE91 /* Pods_BaseballHack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5804D90AFBC334961A6C97E3 /* Pods_BaseballHack.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		738776432234230200FE9944 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		738776452234230200FE9944 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7387764C223445CA00FE9944 /* GraphVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphVC.swift; sourceTree = "<group>"; };
+		73C242092234511F00304821 /* TeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		738776382234230100FE9944 /* BaseballHack */ = {
 			isa = PBXGroup;
 			children = (
+				73C242082234510500304821 /* View */,
 				7387764B22343E2200FE9944 /* Controller */,
 				738776392234230100FE9944 /* AppDelegate.swift */,
 				7387763D2234230100FE9944 /* Main.storyboard */,
@@ -89,6 +92,14 @@
 				7387764C223445CA00FE9944 /* GraphVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		73C242082234510500304821 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				73C242092234511F00304821 /* TeamCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		D08FE43A839E259E0986BC8A /* Frameworks */ = {
@@ -219,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73C2420A2234511F00304821 /* TeamCell.swift in Sources */,
 				7387763C2234230100FE9944 /* ViewController.swift in Sources */,
 				7387764D223445CA00FE9944 /* GraphVC.swift in Sources */,
 				7387763A2234230100FE9944 /* AppDelegate.swift in Sources */,

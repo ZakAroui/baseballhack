@@ -16,13 +16,23 @@ class ViewController: UIViewController {
         return tv
     }()
     
-    private var teams = [String]()
+    private var teams = [(name: String, logo: UIImage?, eval: Int)]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(TeamCell.self, forCellReuseIdentifier: "TeamCell")
+        
+        teams = [
+            (name: "New York Yankees", logo: nil, eval: 400),
+            (name: "Los Angeles Dodgers", logo: nil, eval: 300),
+            (name: "Chicago Cubs", logo: nil, eval: 290),
+            (name: "San Francisco Giants", logo: nil, eval: 285),
+            (name: "Boston Red Sox", logo: nil, eval: 280),
+        ]
         
         setupViews()
     }
@@ -49,13 +59,25 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return teams.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.backgroundColor = .blue
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "TeamCell", for: indexPath) as? TeamCell {
+            let team = teams[indexPath.row]
+            cell.configureTeamCell(team: team)
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = GraphVC()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

@@ -146,6 +146,22 @@ class GraphVC: UIViewController {
         chartView.data = data
     }
     
+    @objc func buy() {
+        let alertController = UIAlertController(title: "Share Bought", message:
+            "You bought a share for $300", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    @objc func sell() {
+        let alertController = UIAlertController(title: "Share Listed", message:
+            "You listed a share for $300", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
     fileprivate func setupView() {
         let margins = view.layoutMarginsGuide
         
@@ -169,13 +185,15 @@ class GraphVC: UIViewController {
         buyButton.translatesAutoresizingMaskIntoConstraints = false
         buyButton.setTitle("BUY", for: .normal)
         buyButton.setTitleColor(.white, for: .normal)
-        buyButton.backgroundColor = .black
+        buyButton.backgroundColor = .green
+        buyButton.addTarget(self, action: #selector(buy), for: .touchUpInside)
         
         let sellButton = UIButton(frame: .zero)
         sellButton.translatesAutoresizingMaskIntoConstraints = false
         sellButton.setTitle("SELL", for: .normal)
         sellButton.setTitleColor(.white, for: .normal)
-        sellButton.backgroundColor = .black
+        sellButton.backgroundColor = .red
+        sellButton.addTarget(self, action: #selector(sell), for: .touchUpInside)
         
         let stackView = UIStackView(arrangedSubviews: [buyButton, sellButton])
         stackView.translatesAutoresizingMaskIntoConstraints = false

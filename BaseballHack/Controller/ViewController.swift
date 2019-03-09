@@ -22,6 +22,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         
+        title = "Sportfolio"
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(TeamCell.self, forCellReuseIdentifier: "TeamCell")

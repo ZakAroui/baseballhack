@@ -33,6 +33,24 @@ class GraphVC: UIViewController {
         view.backgroundColor = .white
         setupView()
         setData()
+        
+        addNewsButton()
+    }
+    
+    fileprivate func addNewsButton() {
+        let newsButton = UIButton(type: .custom)
+        newsButton.setTitle("News", for: .normal)
+        newsButton.setTitleColor(.black, for: .normal)
+        newsButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        newsButton.addTarget(self, action: #selector(showNews), for: .touchUpInside)
+        let newsItem = UIBarButtonItem(customView: newsButton)
+        
+        navigationItem.rightBarButtonItem = newsItem
+    }
+    
+    @objc func showNews() {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "newsBoard") as UIViewController
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     let evalData = [

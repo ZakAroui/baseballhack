@@ -32,9 +32,22 @@ class GraphVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupView()
-        setData()
+        setData(vData: evalData10Y)
+        
+        segmentControl.addTarget(self, action: #selector(updateGraph), for: .valueChanged)
         
         addNewsButton()
+    }
+    
+    @objc func updateGraph() {
+        let index = segmentControl.selectedSegmentIndex
+        if(index == 0){
+            setData(vData: evalData10Y)
+        } else if(index == 1){
+            setData(vData: evalData1Y)
+        } else if(index == 2){
+            setData(vData: evalData6M)
+        }
     }
     
     fileprivate func addNewsButton() {
@@ -53,23 +66,67 @@ class GraphVC: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    let evalData = [
-        400,
+    let evalData10Y = [
+        230,
         370,
-        340,
+        140,
         320,
         250,
-        230,
+        200,
         185,
         170,
-        160,
-        150
+        325,
+        150,
+        217,
+//        305,
+//        100,
+//        130,
+//        280,
+//        222
     ]
     
-    fileprivate func setData() {
-        let yVals1 = (0..<20).map { (i) -> ChartDataEntry in
-            let val = Double(arc4random_uniform(50) + 50)
-            return ChartDataEntry(x: Double(i), y: val)
+    let evalData1Y = [
+        230,
+        240,
+        232,
+        349,
+        249,
+        200,
+        180,
+        199,
+        210,
+        220,
+        230,
+//        235,
+//        220,
+//        200,
+//        201,
+//        222
+    ]
+    
+    let evalData6M = [
+        230,
+        370,
+        140,
+        320,
+        250,
+        200,
+        185,
+        170,
+        325,
+        150,
+        217,
+//        305,
+//        100,
+//        130,
+//        280,
+//        222
+    ]
+    
+    fileprivate func setData(vData: Array<Int>) {
+        let yVals1 = (0..<11).map { (i) -> ChartDataEntry in
+            let val = Double(vData[i])
+            return ChartDataEntry(x: Double(i), y: val )
         }
         
         let set1 = LineChartDataSet(values: yVals1, label: "Share Price")

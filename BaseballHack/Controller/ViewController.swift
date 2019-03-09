@@ -58,5 +58,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = GraphVC()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
 

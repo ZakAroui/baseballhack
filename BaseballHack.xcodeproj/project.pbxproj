@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		735E323422346638004AE039 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735E323322346638004AE039 /* NewsTableViewController.swift */; };
+		735E32362234669B004AE039 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 735E32352234669A004AE039 /* Main.storyboard */; };
 		7387763A2234230100FE9944 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738776392234230100FE9944 /* AppDelegate.swift */; };
 		7387763C2234230100FE9944 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7387763B2234230100FE9944 /* ViewController.swift */; };
-		7387763F2234230100FE9944 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7387763D2234230100FE9944 /* Main.storyboard */; };
+		7387763F2234230100FE9944 /* _Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7387763D2234230100FE9944 /* _Main.storyboard */; };
 		738776412234230200FE9944 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 738776402234230200FE9944 /* Assets.xcassets */; };
 		738776442234230200FE9944 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 738776422234230200FE9944 /* LaunchScreen.storyboard */; };
 		7387764D223445CA00FE9944 /* GraphVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7387764C223445CA00FE9944 /* GraphVC.swift */; };
@@ -21,10 +23,12 @@
 		26E04BDC6695D500245AEBB3 /* Pods-BaseballHack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseballHack.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseballHack/Pods-BaseballHack.release.xcconfig"; sourceTree = "<group>"; };
 		56F1C5DE0E9B564A7C144397 /* Pods-BaseballHack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseballHack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseballHack/Pods-BaseballHack.debug.xcconfig"; sourceTree = "<group>"; };
 		5804D90AFBC334961A6C97E3 /* Pods_BaseballHack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseballHack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		735E323322346638004AE039 /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		735E32352234669A004AE039 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		738776362234230100FE9944 /* BaseballHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseballHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		738776392234230100FE9944 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7387763B2234230100FE9944 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7387763E2234230100FE9944 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7387763E2234230100FE9944 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/_Main.storyboard; sourceTree = "<group>"; };
 		738776402234230200FE9944 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		738776432234230200FE9944 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		738776452234230200FE9944 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,7 +81,8 @@
 				73C242082234510500304821 /* View */,
 				7387764B22343E2200FE9944 /* Controller */,
 				738776392234230100FE9944 /* AppDelegate.swift */,
-				7387763D2234230100FE9944 /* Main.storyboard */,
+				7387763D2234230100FE9944 /* _Main.storyboard */,
+				735E32352234669A004AE039 /* Main.storyboard */,
 				738776402234230200FE9944 /* Assets.xcassets */,
 				738776422234230200FE9944 /* LaunchScreen.storyboard */,
 				738776452234230200FE9944 /* Info.plist */,
@@ -90,6 +95,7 @@
 			children = (
 				7387763B2234230100FE9944 /* ViewController.swift */,
 				7387764C223445CA00FE9944 /* GraphVC.swift */,
+				735E323322346638004AE039 /* NewsTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -172,7 +178,8 @@
 			files = (
 				738776442234230200FE9944 /* LaunchScreen.storyboard in Resources */,
 				738776412234230200FE9944 /* Assets.xcassets in Resources */,
-				7387763F2234230100FE9944 /* Main.storyboard in Resources */,
+				7387763F2234230100FE9944 /* _Main.storyboard in Resources */,
+				735E32362234669B004AE039 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +240,7 @@
 				73C2420A2234511F00304821 /* TeamCell.swift in Sources */,
 				7387763C2234230100FE9944 /* ViewController.swift in Sources */,
 				7387764D223445CA00FE9944 /* GraphVC.swift in Sources */,
+				735E323422346638004AE039 /* NewsTableViewController.swift in Sources */,
 				7387763A2234230100FE9944 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,12 +248,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7387763D2234230100FE9944 /* Main.storyboard */ = {
+		7387763D2234230100FE9944 /* _Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				7387763E2234230100FE9944 /* Base */,
 			);
-			name = Main.storyboard;
+			name = _Main.storyboard;
 			sourceTree = "<group>";
 		};
 		738776422234230200FE9944 /* LaunchScreen.storyboard */ = {

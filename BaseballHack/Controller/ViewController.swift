@@ -58,5 +58,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "newsBoard") as UIViewController
+//        self.present(viewController, animated: false, completion: nil)
+//
+//    }
+    
 }
 

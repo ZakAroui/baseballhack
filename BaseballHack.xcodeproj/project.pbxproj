@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D5537C32235707400FFA0F3 /* RuwtRestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5537C22235707400FFA0F3 /* RuwtRestClient.swift */; };
+		0D5537C622357BEA00FFA0F3 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5537C522357BEA00FFA0F3 /* Team.swift */; };
+		0D5537C822372B9C00FFA0F3 /* TeamsInfoTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5537C722372B9C00FFA0F3 /* TeamsInfoTableVC.swift */; };
 		735E323422346638004AE039 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735E323322346638004AE039 /* NewsTableViewController.swift */; };
 		735E32362234669B004AE039 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 735E32352234669A004AE039 /* Main.storyboard */; };
 		7387763A2234230100FE9944 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738776392234230100FE9944 /* AppDelegate.swift */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D5537C22235707400FFA0F3 /* RuwtRestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuwtRestClient.swift; sourceTree = "<group>"; };
+		0D5537C522357BEA00FFA0F3 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		0D5537C722372B9C00FFA0F3 /* TeamsInfoTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsInfoTableVC.swift; sourceTree = "<group>"; };
 		26E04BDC6695D500245AEBB3 /* Pods-BaseballHack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseballHack.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseballHack/Pods-BaseballHack.release.xcconfig"; sourceTree = "<group>"; };
 		56F1C5DE0E9B564A7C144397 /* Pods-BaseballHack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseballHack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseballHack/Pods-BaseballHack.debug.xcconfig"; sourceTree = "<group>"; };
 		5804D90AFBC334961A6C97E3 /* Pods_BaseballHack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseballHack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +54,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D5537C12235702B00FFA0F3 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0D5537C22235707400FFA0F3 /* RuwtRestClient.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		0D5537C422357BCE00FFA0F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0D5537C522357BEA00FFA0F3 /* Team.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		2F8B0603AF93B30906E79C90 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +102,8 @@
 			children = (
 				73C242082234510500304821 /* View */,
 				7387764B22343E2200FE9944 /* Controller */,
+				0D5537C12235702B00FFA0F3 /* Service */,
+				0D5537C422357BCE00FFA0F3 /* Model */,
 				738776392234230100FE9944 /* AppDelegate.swift */,
 				7387763D2234230100FE9944 /* _Main.storyboard */,
 				735E32352234669A004AE039 /* Main.storyboard */,
@@ -95,6 +119,7 @@
 			children = (
 				7387763B2234230100FE9944 /* ViewController.swift */,
 				7387764C223445CA00FE9944 /* GraphVC.swift */,
+				0D5537C722372B9C00FFA0F3 /* TeamsInfoTableVC.swift */,
 				735E323322346638004AE039 /* NewsTableViewController.swift */,
 			);
 			path = Controller;
@@ -195,12 +220,14 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-BaseballHack/Pods-BaseballHack-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,8 +264,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D5537C32235707400FFA0F3 /* RuwtRestClient.swift in Sources */,
 				73C2420A2234511F00304821 /* TeamCell.swift in Sources */,
+				0D5537C622357BEA00FFA0F3 /* Team.swift in Sources */,
 				7387763C2234230100FE9944 /* ViewController.swift in Sources */,
+				0D5537C822372B9C00FFA0F3 /* TeamsInfoTableVC.swift in Sources */,
 				7387764D223445CA00FE9944 /* GraphVC.swift in Sources */,
 				735E323422346638004AE039 /* NewsTableViewController.swift in Sources */,
 				7387763A2234230100FE9944 /* AppDelegate.swift in Sources */,

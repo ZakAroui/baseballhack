@@ -3,20 +3,26 @@ PODS:
   - Charts (3.2.2):
     - Charts/Core (= 3.2.2)
   - Charts/Core (3.2.2)
+  - SDWebImage (4.4.6):
+    - SDWebImage/Core (= 4.4.6)
+  - SDWebImage/Core (4.4.6)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.0-beta.3)
   - Charts
+  - SDWebImage (~> 4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Charts
+    - SDWebImage
 
 SPEC CHECKSUMS:
   Alamofire: 50d6fa7e8cbe7f84559e86ab641ffd029db655f8
   Charts: f69cf0518b6d1d62608ca504248f1bbe0b6ae77e
+  SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
 
-PODFILE CHECKSUM: 487e8787c6df28623bfeb9641852e0d1b787631b
+PODFILE CHECKSUM: 1652008ace406f9a968a5722f1cb34a7baabea9a
 
 COCOAPODS: 1.6.1

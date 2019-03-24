@@ -11,6 +11,9 @@
 		0D5537C32235707400FFA0F3 /* RuwtRestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5537C22235707400FFA0F3 /* RuwtRestClient.swift */; };
 		0D5537C622357BEA00FFA0F3 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5537C522357BEA00FFA0F3 /* Team.swift */; };
 		0D5537C822372B9C00FFA0F3 /* TeamsInfoTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5537C722372B9C00FFA0F3 /* TeamsInfoTableVC.swift */; };
+		0DD0354E2248334400B3345A /* TeamSocial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD0354D2248334400B3345A /* TeamSocial.swift */; };
+		0DD03550224834A300B3345A /* TeamSocialAssetUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD0354F224834A300B3345A /* TeamSocialAssetUrls.swift */; };
+		0DD03552224839BB00B3345A /* TeamSocialTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD03551224839BB00B3345A /* TeamSocialTableVC.swift */; };
 		735E323422346638004AE039 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735E323322346638004AE039 /* NewsTableViewController.swift */; };
 		735E32362234669B004AE039 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 735E32352234669A004AE039 /* Main.storyboard */; };
 		7387763A2234230100FE9944 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738776392234230100FE9944 /* AppDelegate.swift */; };
@@ -28,6 +31,9 @@
 		0D5537C22235707400FFA0F3 /* RuwtRestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuwtRestClient.swift; sourceTree = "<group>"; };
 		0D5537C522357BEA00FFA0F3 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		0D5537C722372B9C00FFA0F3 /* TeamsInfoTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsInfoTableVC.swift; sourceTree = "<group>"; };
+		0DD0354D2248334400B3345A /* TeamSocial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSocial.swift; sourceTree = "<group>"; };
+		0DD0354F224834A300B3345A /* TeamSocialAssetUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSocialAssetUrls.swift; sourceTree = "<group>"; };
+		0DD03551224839BB00B3345A /* TeamSocialTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSocialTableVC.swift; sourceTree = "<group>"; };
 		26E04BDC6695D500245AEBB3 /* Pods-BaseballHack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseballHack.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseballHack/Pods-BaseballHack.release.xcconfig"; sourceTree = "<group>"; };
 		56F1C5DE0E9B564A7C144397 /* Pods-BaseballHack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseballHack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseballHack/Pods-BaseballHack.debug.xcconfig"; sourceTree = "<group>"; };
 		5804D90AFBC334961A6C97E3 /* Pods_BaseballHack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseballHack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +73,8 @@
 		0D5537C422357BCE00FFA0F3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0DD0354D2248334400B3345A /* TeamSocial.swift */,
+				0DD0354F224834A300B3345A /* TeamSocialAssetUrls.swift */,
 				0D5537C522357BEA00FFA0F3 /* Team.swift */,
 			);
 			path = Model;
@@ -123,6 +131,7 @@
 				7387764C223445CA00FE9944 /* GraphVC.swift */,
 				0D478BFF22374E1F005C9E9C /* TeamInfoVC.swift */,
 				0D5537C722372B9C00FFA0F3 /* TeamsInfoTableVC.swift */,
+				0DD03551224839BB00B3345A /* TeamSocialTableVC.swift */,
 				735E323322346638004AE039 /* NewsTableViewController.swift */,
 			);
 			path = Controller;
@@ -225,6 +234,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-BaseballHack/Pods-BaseballHack-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -232,6 +242,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -267,15 +278,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DD03552224839BB00B3345A /* TeamSocialTableVC.swift in Sources */,
 				0D5537C32235707400FFA0F3 /* RuwtRestClient.swift in Sources */,
 				0D478C0022374E1F005C9E9C /* TeamInfoVC.swift in Sources */,
 				73C2420A2234511F00304821 /* TeamCell.swift in Sources */,
 				0D5537C622357BEA00FFA0F3 /* Team.swift in Sources */,
+				0DD0354E2248334400B3345A /* TeamSocial.swift in Sources */,
 				7387763C2234230100FE9944 /* ViewController.swift in Sources */,
 				0D5537C822372B9C00FFA0F3 /* TeamsInfoTableVC.swift in Sources */,
 				7387764D223445CA00FE9944 /* GraphVC.swift in Sources */,
 				735E323422346638004AE039 /* NewsTableViewController.swift in Sources */,
 				7387763A2234230100FE9944 /* AppDelegate.swift in Sources */,
+				0DD03550224834A300B3345A /* TeamSocialAssetUrls.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

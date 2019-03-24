@@ -9,5 +9,5 @@ target 'BaseballHack' do
   pod 'Charts'
   
   pod 'Alamofire', '~> 5.0.0-beta.3'
-
+  pod 'SDWebImage', '~> 4.0'
 end

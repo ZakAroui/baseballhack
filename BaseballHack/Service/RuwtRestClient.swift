@@ -38,7 +38,7 @@ class RuwtRestClient {
     }
     
     func getTeamSocial(completion: @escaping ([TeamSocial]?) -> Void, teamId: String){
-        let thisTeamSocial = teamSocial + "7073"
+        let thisTeamSocial = teamSocial + teamId
         
         AF.request(thisTeamSocial, method: .get)
             .responseJSON { response in

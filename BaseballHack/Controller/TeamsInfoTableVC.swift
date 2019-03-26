@@ -35,6 +35,30 @@ class TeamsInfoTableVC: UITableViewController {
         return teamList.count
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        switch(segue.identifier ?? "") {
+        case "ShowTeamDetail":
+            print("inside showTeamDetailsSegue")
+            let tabBarC : TeamInfoTBC = segue.destination as! TeamInfoTBC;
+            
+            guard let selectedTeamCell = sender as? TeamsInfoTableViewCell else {
+                fatalError("Unexpected sender: \(sender)")
+            }
+            
+            guard let indexPath = tableView.indexPath(for: selectedTeamCell) else {
+                fatalError("The selected cell is not being displayed by the table")
+            }
+            
+            let selectedTeam = teamList[indexPath.row]
+            tabBarC.team = selectedTeam
+            
+        default:
+            fatalError("Unexpected Segue Identifier; \(String(describing: segue.identifier))")
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TeamInfoCell", for: indexPath) as! TeamsInfoTableViewCell
         

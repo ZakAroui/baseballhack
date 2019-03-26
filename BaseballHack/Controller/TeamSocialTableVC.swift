@@ -18,16 +18,20 @@ class TeamSocialTableViewCell: UITableViewCell {
 
 class TeamSocialTableVC: UITableViewController {
     var teamSocialList: [TeamSocial] = []
+    var team: Team?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tbvc = self.tabBarController  as! TeamInfoTBC
+        team = tbvc.team
         
         let ruwt = RuwtRestClient()
         ruwt.getTeamSocial(completion: {tms in
             self.teamSocialList = tms!
             self.tableView.reloadData()
             print(tms![5].name)
-        }, teamId: "7073")
+        }, teamId: String(team!.teamID))
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

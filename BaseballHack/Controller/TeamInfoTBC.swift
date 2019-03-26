@@ -8,17 +8,13 @@
 
 import UIKit
 
-class TeamInfoVC: UIViewController {
+class TeamInfoTBC: UITabBarController {
     
     var team: Team?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let tbvc = self.tabBarController  as! TeamInfoTBC
-        team = tbvc.team
     }
-    
-    
 
 }

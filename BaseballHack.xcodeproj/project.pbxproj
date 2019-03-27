@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D12DA532249C716000444BA /* TeamInfoTBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D12DA522249C716000444BA /* TeamInfoTBC.swift */; };
+		0D183E05224AFE980059D42C /* WebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D183E04224AFE980059D42C /* WebViewVC.swift */; };
 		0D478C0022374E1F005C9E9C /* TeamInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D478BFF22374E1F005C9E9C /* TeamInfoVC.swift */; };
 		0D5537C32235707400FFA0F3 /* RuwtRestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5537C22235707400FFA0F3 /* RuwtRestClient.swift */; };
 		0D5537C622357BEA00FFA0F3 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5537C522357BEA00FFA0F3 /* Team.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		0D12DA522249C716000444BA /* TeamInfoTBC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInfoTBC.swift; sourceTree = "<group>"; };
+		0D183E04224AFE980059D42C /* WebViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewVC.swift; sourceTree = "<group>"; };
 		0D478BFF22374E1F005C9E9C /* TeamInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInfoVC.swift; sourceTree = "<group>"; };
 		0D5537C22235707400FFA0F3 /* RuwtRestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuwtRestClient.swift; sourceTree = "<group>"; };
 		0D5537C522357BEA00FFA0F3 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				7387763B2234230100FE9944 /* ViewController.swift */,
 				7387764C223445CA00FE9944 /* GraphVC.swift */,
 				0D478BFF22374E1F005C9E9C /* TeamInfoVC.swift */,
+				0D183E04224AFE980059D42C /* WebViewVC.swift */,
 				0D12DA522249C716000444BA /* TeamInfoTBC.swift */,
 				0D5537C722372B9C00FFA0F3 /* TeamsInfoTableVC.swift */,
 				0DD03551224839BB00B3345A /* TeamSocialTableVC.swift */,
@@ -284,6 +287,7 @@
 				0DD03552224839BB00B3345A /* TeamSocialTableVC.swift in Sources */,
 				0D5537C32235707400FFA0F3 /* RuwtRestClient.swift in Sources */,
 				0D478C0022374E1F005C9E9C /* TeamInfoVC.swift in Sources */,
+				0D183E05224AFE980059D42C /* WebViewVC.swift in Sources */,
 				73C2420A2234511F00304821 /* TeamCell.swift in Sources */,
 				0D5537C622357BEA00FFA0F3 /* Team.swift in Sources */,
 				0DD0354E2248334400B3345A /* TeamSocial.swift in Sources */,

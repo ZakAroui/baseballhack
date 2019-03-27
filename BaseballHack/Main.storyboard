@@ -388,7 +388,7 @@
                                     <outlet property="profilePicture" destination="luA-7c-fIW" id="Ygc-hC-Nu7"/>
                                     <outlet property="tweetLabel" destination="eMI-hw-VgJ" id="WZS-ii-du3"/>
                                     <outlet property="tweetTitle" destination="vJ4-Qy-467" id="lSF-FE-SXe"/>
-                                    <segue destination="OFe-A3-6Ox" kind="show" id="Scb-zD-1Vt"/>
+                                    <segue destination="OFe-A3-6Ox" kind="show" identifier="ShowSocialWeb" id="Scb-zD-1Vt"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -403,10 +403,10 @@
             </objects>
             <point key="canvasLocation" x="3522" y="-338"/>
         </scene>
-        <!--View Controller-->
+        <!--Web ViewVC-->
         <scene sceneID="Xg0-Xz-efT">
             <objects>
-                <viewController id="OFe-A3-6Ox" sceneMemberID="viewController">
+                <viewController id="OFe-A3-6Ox" customClass="WebViewVC" customModule="BaseballHack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n1s-wH-Mw6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -429,6 +429,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O5x-mF-UfB"/>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="E7T-Po-B8h" id="tqX-A7-rP0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o6v-4X-huI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

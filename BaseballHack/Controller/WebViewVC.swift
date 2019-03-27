@@ -9,16 +9,30 @@
 import UIKit
 import WebKit
 
+enum WebViewSource {
+    case social
+    case asset
+}
+
 class WebViewVC: UIViewController, WKNavigationDelegate {
     
     @IBOutlet weak var webView: WKWebView!
     var teamSocial: TeamSocial?
+    var teamAsset: TeamAssest?
+    var sourceVc: WebViewSource?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let urlString = teamSocial?.url else {
-            fatalError("no url found")
+        var urlString = ""
+        
+        switch sourceVc {
+        case .social?:
+            urlString = teamSocial?.url ?? ""
+        case .asset?:
+            urlString = teamAsset?.url ?? ""
+        case .none:
+            urlString = ""
         }
         
         let url = URL(string: urlString)!
@@ -44,5 +58,6 @@ class WebViewVC: UIViewController, WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         title = webView.title
     }
+    
     
 }

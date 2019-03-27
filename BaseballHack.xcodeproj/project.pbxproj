@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0D12DA532249C716000444BA /* TeamInfoTBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D12DA522249C716000444BA /* TeamInfoTBC.swift */; };
 		0D183E05224AFE980059D42C /* WebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D183E04224AFE980059D42C /* WebViewVC.swift */; };
+		0D183E07224B06F10059D42C /* TeamAssest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D183E06224B06F10059D42C /* TeamAssest.swift */; };
+		0D183E09224B0A550059D42C /* TeamAssetsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D183E08224B0A550059D42C /* TeamAssetsTableVC.swift */; };
 		0D478C0022374E1F005C9E9C /* TeamInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D478BFF22374E1F005C9E9C /* TeamInfoVC.swift */; };
 		0D5537C32235707400FFA0F3 /* RuwtRestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5537C22235707400FFA0F3 /* RuwtRestClient.swift */; };
 		0D5537C622357BEA00FFA0F3 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5537C522357BEA00FFA0F3 /* Team.swift */; };
@@ -31,6 +33,8 @@
 /* Begin PBXFileReference section */
 		0D12DA522249C716000444BA /* TeamInfoTBC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInfoTBC.swift; sourceTree = "<group>"; };
 		0D183E04224AFE980059D42C /* WebViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewVC.swift; sourceTree = "<group>"; };
+		0D183E06224B06F10059D42C /* TeamAssest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamAssest.swift; sourceTree = "<group>"; };
+		0D183E08224B0A550059D42C /* TeamAssetsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamAssetsTableVC.swift; sourceTree = "<group>"; };
 		0D478BFF22374E1F005C9E9C /* TeamInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInfoVC.swift; sourceTree = "<group>"; };
 		0D5537C22235707400FFA0F3 /* RuwtRestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuwtRestClient.swift; sourceTree = "<group>"; };
 		0D5537C522357BEA00FFA0F3 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				0DD0354D2248334400B3345A /* TeamSocial.swift */,
+				0D183E06224B06F10059D42C /* TeamAssest.swift */,
 				0DD0354F224834A300B3345A /* TeamSocialAssetUrls.swift */,
 				0D5537C522357BEA00FFA0F3 /* Team.swift */,
 			);
@@ -138,6 +143,7 @@
 				0D12DA522249C716000444BA /* TeamInfoTBC.swift */,
 				0D5537C722372B9C00FFA0F3 /* TeamsInfoTableVC.swift */,
 				0DD03551224839BB00B3345A /* TeamSocialTableVC.swift */,
+				0D183E08224B0A550059D42C /* TeamAssetsTableVC.swift */,
 				735E323322346638004AE039 /* NewsTableViewController.swift */,
 			);
 			path = Controller;
@@ -289,8 +295,10 @@
 				0D478C0022374E1F005C9E9C /* TeamInfoVC.swift in Sources */,
 				0D183E05224AFE980059D42C /* WebViewVC.swift in Sources */,
 				73C2420A2234511F00304821 /* TeamCell.swift in Sources */,
+				0D183E09224B0A550059D42C /* TeamAssetsTableVC.swift in Sources */,
 				0D5537C622357BEA00FFA0F3 /* Team.swift in Sources */,
 				0DD0354E2248334400B3345A /* TeamSocial.swift in Sources */,
+				0D183E07224B06F10059D42C /* TeamAssest.swift in Sources */,
 				0D12DA532249C716000444BA /* TeamInfoTBC.swift in Sources */,
 				7387763C2234230100FE9944 /* ViewController.swift in Sources */,
 				0D5537C822372B9C00FFA0F3 /* TeamsInfoTableVC.swift in Sources */,

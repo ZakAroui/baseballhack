@@ -54,8 +54,9 @@ class TeamSocialTableVC: UITableViewController {
                 fatalError("The selected cell is not being displayed by the table")
             }
             
-            let selectedTeam = teamSocialList[indexPath.row]
-            webViewVC.teamSocial = selectedTeam
+            let selectedSocial = teamSocialList[indexPath.row]
+            webViewVC.sourceVc = WebViewSource.social
+            webViewVC.teamSocial = selectedSocial
             
         default:
             fatalError("Unexpected Segue Identifier; \(String(describing: segue.identifier))")

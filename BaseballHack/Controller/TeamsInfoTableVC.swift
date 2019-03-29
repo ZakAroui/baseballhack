@@ -63,7 +63,7 @@ class TeamsInfoTableVC: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TeamInfoCell", for: indexPath) as! TeamsInfoTableViewCell
         
         let team = teamList[indexPath.row]
-        cell.backgroundColor = hexStringToUIColor(hex: team.color, alpha: 0.5)
+        cell.backgroundColor = TeamsInfoTableVC.hexStringToUIColor(hex: team.color, alpha: 0.5)
         cell.titleLabel?.text = team.name
         cell.cityLabel?.text = team.city + " (" + team.initials + ")"
         cell.winsValLabel?.text = String(team.wins)
@@ -73,7 +73,7 @@ class TeamsInfoTableVC: UITableViewController {
         return cell
     }
     
-    func hexStringToUIColor (hex:String, alpha: Float) -> UIColor {
+    static func hexStringToUIColor (hex:String, alpha: Float) -> UIColor {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         
         if (cString.hasPrefix("#")) {

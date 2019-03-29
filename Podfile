@@ -7,5 +7,7 @@ target 'BaseballHack' do
 
   # Pods for BaseballHack
   pod 'Charts'
-
+  
+  pod 'Alamofire', '~> 5.0.0-beta.3'
+  pod 'SDWebImage', '~> 4.0'
 end

@@ -29,13 +29,14 @@ class ViewController: UIViewController {
         tableView.register(TeamCell.self, forCellReuseIdentifier: "TeamCell")
         
         teams = [
-            (name: "New York Yankees", logo: #imageLiteral(resourceName: "yankeesLogo"), eval: 400),
-            (name: "Los Angeles Dodgers", logo: #imageLiteral(resourceName: "dodgersLogo"), eval: 300),
-            (name: "Chicago Cubs", logo: #imageLiteral(resourceName: "cubsLogo"), eval: 290),
-            (name: "San Francisco Giants", logo: #imageLiteral(resourceName: "giantsLogo"), eval: 285),
-            (name: "Boston Red Sox", logo: #imageLiteral(resourceName: "soxLogo"), eval: 280),
+            (name: "New York Yankees", logo: #imageLiteral(resourceName: "7073"), eval: 400),
+            (name: "Los Angeles Dodgers", logo: #imageLiteral(resourceName: "13382"), eval: 300),
+            (name: "Chicago Cubs", logo: #imageLiteral(resourceName: "13377"), eval: 290),
+            (name: "San Francisco Giants", logo: #imageLiteral(resourceName: "13388"), eval: 285),
+            (name: "Boston Red Sox", logo: #imageLiteral(resourceName: "7066"), eval: 280),
         ]
         
+        addTeamsInfoButton()
         setupViews()
     }
     
@@ -50,6 +51,22 @@ class ViewController: UIViewController {
             tableView.bottomAnchor.constraint(equalTo: margins.bottomAnchor)
             ])
         
+    }
+    
+    fileprivate func addTeamsInfoButton() {
+        let teamsInfoButton = UIButton(type: .custom)
+        teamsInfoButton.setTitle("Teams Info", for: .normal)
+        teamsInfoButton.setTitleColor(.blue, for: .normal)
+        teamsInfoButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        teamsInfoButton.addTarget(self, action: #selector(showTeamsInfo), for: .touchUpInside)
+        let infoItem = UIBarButtonItem(customView: teamsInfoButton)
+        
+        navigationItem.rightBarButtonItem = infoItem
+    }
+    
+    @objc func showTeamsInfo() {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "teamsInfoBoard") as UIViewController
+        navigationController?.pushViewController(vc, animated: true)
     }
 
 }

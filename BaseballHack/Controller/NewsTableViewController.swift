@@ -1,3 +1,11 @@
+//
+//  NewsTableViewController.swift
+//  BaseballHack
+//
+//  Created by Zack Aroui on 3/9/19.
+//  Copyright © 2019 GameChanger. All rights reserved.
+//
+
 import UIKit
 
 struct Headline {

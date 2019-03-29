@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os.log
 
 class TeamsInfoTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
@@ -23,12 +24,17 @@ class TeamsInfoTableVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if let lst = loadTeams() {
+            teamList = lst
+        }
+        
         let ruwt = RuwtRestClient()
         ruwt.getTeams(completion: {tms in
             self.teamList = tms!
+            self.saveTeams()
             self.tableView.reloadData()
-            print(tms![5].name)
         })
+        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -40,7 +46,6 @@ class TeamsInfoTableVC: UITableViewController {
         
         switch(segue.identifier ?? "") {
         case "ShowTeamDetail":
-            print("inside showTeamDetailsSegue")
             let tabBarC : TeamInfoTBC = segue.destination as! TeamInfoTBC;
             
             guard let selectedTeamCell = sender as? TeamsInfoTableViewCell else {
@@ -71,6 +76,19 @@ class TeamsInfoTableVC: UITableViewController {
         cell.logoImageView?.image = UIImage(named: String(team.teamID))
         
         return cell
+    }
+    
+    private func saveTeams() {
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(teamList, toFile: Team.ArchiveURL.path)
+        if isSuccessfulSave {
+            os_log("Teams successfully saved.", log: OSLog.default, type: .debug)
+        } else {
+            os_log("Failed to save teams...", log: OSLog.default, type: .error)
+        }
+    }
+    
+    private func loadTeams() -> [Team]?  {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Team.ArchiveURL.path) as? [Team]
     }
     
     static func hexStringToUIColor (hex:String, alpha: Float) -> UIColor {
